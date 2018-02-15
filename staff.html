@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Medsoft Pharmacy</title>
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/ionicons.min.css">
+    <link rel="stylesheet" href="css/materialize.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="blue-grey lighten-5">
+
+<div class="navbar-fixed">
+    <nav class="white">
+        <div class="nav-wrapper container">
+            <a href="index.html" class="brand-logo">
+                <i class="icon ion-medkit"></i>
+                Medsoft Pharmacy
+            </a>
+            <ul class="right">
+                <li>
+                    <a href="#!" class="grey lighten-5 btn waves-effect">
+                        <i class="icon ion-power left"></i>
+                        Logout
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</div>
+
+<aside>
+    <ul>
+        <!--<li>
+            <a href="#!" class="waves-effect waves-light">
+                <i class="icon ion-ios-home x2"></i>
+                <br>
+                <span>Home</span>
+            </a>
+        </li>-->
+        <li>
+            <a href="index.html" class="waves-effect waves-light">
+                <i class="icon ion-ios-flask x2"></i>
+                <br>
+                <span>Drug</span>
+            </a>
+        </li>
+        <li>
+            <a href="staff.html" class="waves-effect waves-light active">
+                <i class="icon ion-ios-people x2"></i>
+                <br>
+                <span>Staff</span>
+            </a>
+        </li>
+        <li>
+            <a href="store.html" class="waves-effect waves-light">
+                <i class="icon ion-filing x2"></i>
+                <br>
+                <span>Store</span>
+            </a>
+        </li>
+        <li>
+            <a href="expired-drugs.html" class="waves-effect waves-light">
+                <i class="icon ion-clipboard x2"></i>
+                <br>
+                <span>Expired Drugs</span>
+            </a>
+        </li>
+    </ul>
+</aside>
+
+<main class="row">
+    <div class="col s12">
+        <div class="card-panel main-panel">
+            <table class="bordered fixed striped highlight centered">
+                <thead class="blue-grey white-text">
+                <tr>
+                    <th class="small">S/N</th>
+                    <th class="small">Reg ID</th>
+                    <th class="small">Full Name</th>
+                    <th class="small">Username</th>
+                    <th class="small">sex</th>
+                    <th class="small">Address</th>
+                    <th class="small">Phone No.</th>
+                    <th class="small">Email</th>
+                    <th class="small">Date Employed</th>
+                    <th class="small">isAdmin</th>
+                    <th class="small action-row">Actions</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>01</td>
+                    <td>MSP/17/001</td>
+                    <td>Ajala Abdulsamii Olalekan</td>
+                    <td>jalasem</td>
+                    <td>Male</td>
+                    <td>No 12, Onikanga Street, GRA, Ilorin</td>
+                    <td>08168861541</td>
+                    <td>kgasta@gmail.com</td>
+                    <td>10/06/2017</td>
+                    <td><i class="icon prefix ion-checkmark-round"></i></td>
+                    <!--<i class="icon prefix ion-close-round"></i>-->
+                    <td>
+                        <button class="btn waves-effect waves-light">Edit</button>
+                        <button class="btn waves-effect waves-light red">Delete</button>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="fixed-action-btn">
+        <a id="open-popup" class="btn-floating btn-large red waves-effect waves-light">
+            <i class="large icon ion-android-person-add"></i>
+        </a>
+    </div>
+</main>
+
+<div id="add_staff_popup" class="popup hide animated">
+    <div class="popup-overlay"></div>
+    <div class="popup-body row">
+        <div class="close-area"></div>
+        <div class="container">
+            <div class="card">
+                <div class="popup-header blue">
+                    <i class="icon ion-android-add-circle"></i> Add Staff
+                    <span class="close-btn">
+                            <i class="icon ion-close-round x2"></i>
+                        </span>
+                </div>
+                <div class="popup-content row center-align">
+                    <form class="col s12">
+                        <div class="row">
+                            <div class="input-field col s12 m4 l4">
+                                <i class="icon ion-ios-keypad prefix"></i>
+                                <input id="regid_add" type="text" class="validate" required>
+                                <label for="regid_add">REG ID</label>
+                            </div>
+                            <div class="input-field col s6 m3 l4">
+                                <i class="icon ion-ios-person-outline prefix"></i>
+                                <input id="fullname_add" type="text" class="validate" required>
+                                <label for="fullname_add">Full Name</label>
+                            </div>
+                            <div class="input-field col s6 m3 l4">
+                                <i class="icon ion-android-person prefix"></i>
+                                <input id="username_add" type="text" class="validate" required>
+                                <label for="username_add">Username</label>
+                            </div>
+                            <div class="input-field col s6 m3 l4">
+                                <i class="icon ion-android-mail prefix"></i>
+                                <input id="email_add" type="email" class="validate" required>
+                                <label for="email_add">Email</label>
+                            </div>
+                            <div class="input-field col s6 m3 l4">
+                                <i class="icon ion-android-lock prefix"></i>
+                                <input id="staff_password_add" type="password" class="validate" required>
+                                <label for="staff_password_add">Password</label>
+                            </div>
+                            <div class="input-field col s6 m3 l4">
+                                <i class="icon ion-android-people prefix"></i>
+                                <input id="sex_add" type="text" class="validate" required>
+                                <label for="sex_add">Sex</label>
+                            </div>
+                            <div class="input-field col s6 m3 l4">
+                                <i class="icon ion-map prefix"></i>
+                                <input id="address_add" type="text" class="validate" required>
+                                <label for="address_add">Address</label>
+                            </div>
+                            <div class="input-field col s6 m3 l4">
+                                <i class="icon prefix ion-android-phone-portrait"></i>
+                                <input id="phone_no_add" type="number" class="validate" required>
+                                <label for="phone_no_add">Phone Number</label>
+                            </div>
+                            <div class="input-field col s6 m3 l4">
+                                <i class="icon prefix ion-calendar"></i>
+                                <input id="date_employed_add" type="date" class="datepicker center-align">
+                                <label for="date_employed_add">Date Employed</label>
+                            </div>
+                            <div class="input-field col s6 m3 l4">
+                                <i class="icon prefix ion-ios-body"></i>
+                                <input type="checkbox" id="is_admin_add" checked="checked" class="validate"/>
+                                <label for="is_admin_add">isAdmin</label>
+                            </div>
+                            <div class="col s12">
+                                <br>
+                                <button class="btn-large light-blue darken-1 waves-effect">Add Staff</button>
+                            </div>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="js/jquery.min.js"></script>
+<script src="js/materialize.min.js"></script>
+<script src="js/app.js"></script>
+</body>
+
+</html>
